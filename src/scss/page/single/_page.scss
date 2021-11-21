@@ -1,0 +1,47 @@
+.post {
+
+    &-nav {
+        margin: $top60 auto;
+    }
+
+    &-page {
+
+        &-numbers {
+            display: inline-block;
+            min-width: 40px;
+            height: 40px;
+            line-height: 38px;
+            margin-right: 1rem;
+            font-family: $chalk;
+            font-size: 1.875rem;
+            color: $stag-beetle;
+            border: 1px solid #0090ff;
+            text-align: center;
+    
+            &:hover {
+                background-color: #0090ff;
+                color: $winter;
+                transition: all ease .5s;
+            }
+    
+            &.current {
+                background: rgba(67, 239, 138, 0.9);
+                border: 1px solid $leaf;
+                color: $beetle;
+                font-weight: 700;
+            }
+    
+            &.next, &.prev {
+                border: none;
+    
+                &:hover {
+                    background-color: transparent;
+                    color: #0090ff;
+                    transition: all ease .5s;
+                }
+            }
+        }
+    }
+}
+
+

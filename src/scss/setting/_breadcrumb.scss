@@ -1,0 +1,29 @@
+.breadcrumb{
+    
+    width: 100%;
+
+    & > span, & > span > a {
+        color: #808080;
+
+        &:hover {
+            opacity: .5;
+            transition: all ease .5s;
+        }
+
+        &:last-child:hover {
+            opacity: 1;
+            transition: none;
+        }
+    }
+
+    & .home::before {
+        content: "\f015";
+        font-family: "Font Awesome 5 Free", sans-serif;
+        font-weight: 900;
+        margin-right: 10px;
+    }
+}
+
+.current-item {
+    line-height: 1.3;
+}

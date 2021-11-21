@@ -1,0 +1,38 @@
+$breakpoints: (
+ 'xm': 'screen and (max-width: 300px)',
+ 'mm': 'screen and (max-width: 387px)',
+ 'sm': 'screen and (max-width: 544px)',
+ 'md': 'screen and (max-width: 768px)',
+ 'lg': 'screen and (max-width: 992px)',
+ 'xl': 'screen and (max-width: 1080px)'
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+
+/*=====================================
+# color
+=====================================*/
+
+$stag-beetle: #000;
+$beetle: #820303;
+$winter: #fff;
+$leaf: #43ef8a;
+
+/*=====================================
+# font-family
+=====================================*/
+
+$chalk: 'Chalkduster', sans-selif;
+$google-jp: "M PLUS Rounded 1c", sans-serif;
+
+/*=====================================
+# margin, padding
+=====================================*/
+
+$ml-center: 0 auto;
+$top60: 60px;

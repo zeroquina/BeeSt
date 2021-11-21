@@ -1,0 +1,68 @@
+.answer {
+    &-inner {
+        margin-top: $top60;
+        padding: 0 1em;
+    }
+
+    &__breadcrumb {
+        margin-top: $top60;
+    }
+
+    &__txt-btn {
+        margin-top: $top60;
+    }
+
+    &__main-txt, &__sub-txt {
+        text-align: center;
+    }
+
+    &__main-txt {
+        line-height: 1.5;
+        font-size: 1.5rem;
+
+        @include mq(md) {
+            font-size: 1.125rem;
+        }
+    }
+
+    &__sub-txt {
+        margin-top: 1em;
+        margin-bottom: 2.875em;
+        line-height: 1.2;
+        font-size: 1.225rem;
+
+        @include mq(md) {
+            font-size: 1rem;
+        }
+    }
+
+    &__footer {
+        margin-top: 5rem;
+    }
+
+    &__btn {
+        margin: 4em 0;
+        text-align: center;
+
+        & > a {
+            background-color: $winter;
+            padding: 1em 5em;
+            color: $stag_beetle;
+            border: 2px solid #0090ff;
+            border-radius: 3px;
+            outline: none;
+            transition: all ease .3s;
+            cursor: pointer;
+
+            @include mq(sm) {
+                padding: 1em 3em;
+            }
+
+            &:hover {
+                background-color: #0090ff;
+                color: $winter;
+                transition: all ease .3s;
+            }
+        }
+    }
+}

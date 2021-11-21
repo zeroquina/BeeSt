@@ -1,0 +1,40 @@
+.concept {
+
+    width: 100%;
+    height: auto;
+    padding: $top60 2em;
+    background: url(../src/images/top-bg.jpg) no-repeat center center/cover;
+    background-color: $winter;
+
+    &-inner {
+        padding: 0 2em;
+        background-color: rgba( 255, 255, 255, 0.7 );
+    }
+
+    &__content {
+        padding-top: $top60;
+    }
+
+    &__subtitle {
+        font-size: 1.875rem;
+        text-align: center;
+        margin-top: $top60;
+    }
+
+    &__txts {
+        max-width: 720px;
+        margin: 60px auto 0 auto;
+        padding-bottom: 60px;
+
+        @include mq(md) {
+            padding-right: 1em;
+            padding-left: 1em;
+        }
+    }
+
+    &__txt {
+        line-height: 1.5;
+        margin-top: 30px;
+        font-size: 1.3rem;
+    }
+}

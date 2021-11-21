@@ -1,0 +1,151 @@
+/*=====================================
+# drawer
+=====================================*/
+
+.gnav-icon {
+    display: none;
+    position: absolute;
+    top: -64px;
+    right: 1em;
+    padding: 0;
+    border: none;
+    background: transparent;
+    text-align: center;
+    transition: all .5s ease 0;
+    box-shadow: none;
+    z-index: 111;
+    outline: none;
+  
+    &.is-checked {
+      transform: translateX( -300px );
+
+      @include mq(sm) {
+        transform: translateX( -200px );
+      }
+    }
+  
+    @include mq(md) {
+        display: block;
+    }
+  }
+  
+  .gnav-bars {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    vertical-align: bottom;
+  }
+  
+  .gnav-bar {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: #000;
+    border-radius: 99px;
+    transition: all 0.3s linear 0s;
+  
+    &:nth-of-type(1) {
+        top: 0;
+    }
+  
+    &:nth-of-type(2) {
+        top: 15px;
+    }
+  
+    &:nth-of-type(3) {
+        top: 30px;
+    }
+  
+    .is-checked & {
+
+    &:nth-of-type(1) {
+      top: 14px;
+      background: #000;
+      transform: rotate(-45deg);
+    }
+  
+    &:nth-of-type(2) {
+      background: transparent;
+    }
+  
+    &:nth-of-type(3) {
+      top: 14px;
+      background: #000;
+      transform: rotate(45deg);
+    }
+  }
+}
+  
+.gnav-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(67, 239, 138, 0.4);
+  opacity: 0;
+  transition: all 0.5s ease 0s;
+  z-index: 109;
+  
+    &.is-checked {
+      display: block;
+      opacity: 0.8;
+    }
+  }
+  
+  .gnav-content {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    z-index: 110;
+    transform: translateX(105%);
+    width: 300px;
+    max-width: 90%;
+    height: 100%;
+    background-color: #fff;
+    color: #707070;
+    text-align: center;
+    transition: all .5s ease 0s;
+
+    @include mq(sm) {
+      width: 200px;
+    }
+  
+    &.is-checked {
+        transform: translateX(0);
+    }
+
+    ul {
+      transform: translateY(30%);
+    }
+  
+    li {
+
+      height: 90px;
+
+        a {
+            display: block;
+            color: #000;
+            font-size: 1.5rem;
+            font-family:  $chalk;
+            text-transform: uppercase;
+
+            @include mq(sm) {
+              font-size: 1.375rem;
+            }
+        }
+    }
+}
+
+.change-gnav {
+  background-color: rgba(0, 144, 255, 0.4);
+  transition: background-color .5s;
+}
+

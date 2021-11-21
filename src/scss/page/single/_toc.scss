@@ -1,0 +1,112 @@
+#toc_container {
+    width: 100% !important;
+    margin: $top60 auto;
+    padding: 20px 30px;
+    border: 2px solid #0090ff;
+
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    & > ul > li {
+        margin-bottom: 1.25em;
+        counter-increment: toc;
+
+        & > a {
+            position: relative;
+            display: inline-block;
+            padding-left: 2em;
+            color: $stag-beetle;
+            font-size: 1.25rem;
+
+            &::before {
+                position: absolute;
+                top: -3px;
+                left: 0;
+                min-width: 26px;
+                height: 26px;
+                background-color: #0090ff;
+                color: $winter;
+                font-weight: bold;
+                line-height: 26px;
+                text-align: center;
+                border-radius: 26px;
+                content: counter(toc);
+            }
+
+            &:hover {
+                opacity: .5;
+                transition: all ease .5s;
+            }
+        }
+
+        & > ul {
+            margin-top: 6px;
+            padding-left: 36px;
+
+            & > li {
+                margin-bottom: 2px;
+                line-height: 1.7;
+
+                & > a {
+                    position: relative;
+                    color: $stag-beetle;
+
+                    &:before {
+                        position: absolute;
+                        top: 8px;
+                        left: -10px;
+                        width: 5px;
+                        height: 5px;
+                        background-color: #0090ff;
+                        border-radius: 5px;
+                        content: "";
+                    }
+
+                    &:hover {
+                        opacity: .5;
+                        transition: all ease .5s;
+                    }
+                }
+
+                & > ul > li {
+
+                    & > a {
+                        color: $stag-beetle;
+
+                        &:hover {
+                            opacity: .5;
+                            transition: all ease .5s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.toc_title {
+    margin-bottom: 2em;
+    padding-bottom: 6px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1.8;
+    border-bottom: 2px solid #0090ff;
+    text-align: center;
+
+    & > span {
+        margin-left: .5em;
+        text-decoration: none;
+
+        & > a {
+            color: $stag-beetle;
+
+            &:hover {
+                opacity: .4;
+                transition: all ease .5s;
+            }
+        }
+    }
+}

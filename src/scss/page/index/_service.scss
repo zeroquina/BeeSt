@@ -1,0 +1,86 @@
+.service {
+    padding-top: $top60;
+    padding-bottom: $top60;
+    background-color: rgba(0, 144, 255, 0.4);
+
+    &__cards {
+        margin-top: $top60;
+        display: flex;
+        padding: 0 45px;
+        background-color: rgba(255, 255, 255, 0.4);
+
+        @include mq(lg) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__card {
+        width: calc(33.33333333% - 30px * 2 / 3);
+        margin: 45px 45px 45px 0;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12),
+        0 2px 3px 0 rgba(0, 0, 0, 0.22);
+
+        &:nth-child(3) {
+            margin-right: 0;
+        }
+
+        @include mq(lg) {
+            width: 100%;
+            margin-right: 0;
+        }
+
+        &__img {
+            margin-top: 20px;
+            text-align: center;
+
+           & > img {
+                width: 100px;
+                height: 100px;
+                border-radius: 9999px;
+                background-color: $winter;
+            }
+        }
+
+        &__body {
+            padding: 20px;
+        }
+
+        &__title {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        &__subtitle {
+            margin-top: 20px;
+            line-height: 1.25;
+            font-size: 1.25rem;
+        }
+    }
+
+    &__btn {
+        display: block;
+        max-width: 500px;
+        margin: $top60 auto;
+        padding: 1em 3em;
+        background-color: rgba(255, 255, 255, 0.4);
+        border: 2px solid $leaf;
+        font-size: 1.5rem;
+        color: $beetle;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12),
+        0 2px 3px 0 rgba(0, 0, 0, 0.22);
+        border-radius: 5px;
+        text-align: center;
+
+        @include mq(sm) {
+            margin-right: 1em;
+            margin-left: 1em;
+        }
+
+        &:hover {
+            background-color: rgba(67, 239, 138, 0.7);
+            border: 2px solid $leaf;
+            color: $stag-beetle;
+            transition: all ease .5s;
+        }
+    }
+}

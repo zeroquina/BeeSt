@@ -1,0 +1,103 @@
+.about {
+    margin-top: $top60;
+
+    &__item {
+        margin: $top60 0;
+
+        &__wrapper {
+            display: flex;
+            margin-top: 3em;
+            padding: 1.875em;
+            background: rgba(0, 0, 0, 0.8);
+
+            @include mq(md) {
+                display: block;
+                background: transparent;
+            }
+
+            &-reverse {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
+    &__breadcrumb {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 1em;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        text-align: center;
+
+        @include mq(md) {
+            font-size: 2rem;
+        }
+
+        @include mq(sm) {
+            font-size: 1.5rem;
+            margin-top: 1em;
+        }
+    }
+
+    &__img {
+        width: 45%;
+        margin: auto 5% auto 0;
+
+        &-reverse {
+            margin: auto 0 auto 5%;
+
+            @include mq(md) {
+                margin: auto 5% auto 0;
+            }
+        }
+
+        @include mq(md) {
+            position: relative;
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    &__txts {
+        width: 45%;
+        margin: auto;
+        line-height: 1.2;
+        font-size: 1.5rem;
+        color: $winter;
+
+        @include mq(md) {
+            position: absolute;
+            right: 0;
+            left: 0;
+            width: 89%;
+            margin: 0 auto;
+            padding: 3%;
+            background: rgba(0, 0, 0, 0.4);
+            transform: translateY(-100%);
+        }
+
+        @include mq(sm) {
+            width: 82%;
+            font-size: 1rem;
+        }
+
+        @include mq(mm) {
+            font-size: .85rem;
+        }
+
+        @include mq(xm) {
+            width: 90%;
+            transform: translateY(-102%);
+        }
+    }
+
+    &__txt {
+        margin-top: 1.25em;
+
+        &:nth-child(1) {
+            margin-top: 0;
+        }
+    }
+}

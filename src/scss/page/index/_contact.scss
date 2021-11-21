@@ -1,0 +1,126 @@
+.contact {
+
+    margin: $top60 0;
+
+    &__txt, &__btn {
+        text-align: center;
+    }
+
+    &__txt {
+        margin-top: $top60;
+        line-height: 1.5;
+        font-size: 1.7rem;
+
+        @include mq(md) {
+            padding: 0 1em;
+        }
+    }
+
+    &__btn {
+        display: block;
+        max-width: 500px;
+        margin: $top60 auto;
+        padding: 1em 3em;
+        border: 2px solid $leaf;
+        font-size: 1.5rem;
+        color: $beetle;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12),
+        0 2px 3px 0 rgba(0, 0, 0, 0.22);
+        border-radius: 5px;
+
+        @include mq(sm) {
+            margin-right: 1em;
+            margin-left: 1em;
+        }
+
+        &:hover {
+            background-color: $leaf;
+            color: $stag-beetle;
+            transition: all ease .5s;
+        }
+    }
+
+    &__beetles {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            width: 60px;
+            height: 30px;
+            left: -30px;
+            bottom: -2px;
+            background: url(../src/images/beetle.png) no-repeat center center/cover;
+            transition: 1s;
+            content: "";
+
+            @include mq(sm) {
+                width: 40px;
+                height: 20px;
+                left: -50px;
+                bottom: 2px;
+            }
+
+            @include mq(mm) {
+                bottom: 10px;
+            }
+
+            @include mq(xm) {
+                display: none;
+            }
+        }
+
+        &:after {
+            position: absolute;
+            width: 40px;
+            height: 30px;
+            right: -10px;
+            bottom: -2px;
+            background: url(../src/images/stag_beetle.png) no-repeat center center/cover;
+            opacity: 0;
+            transition: .5s;
+            content: "";
+
+            @include mq(sm) {
+                width: 30px;
+                height: 21px;
+                right: -45px;
+                bottom: 0;
+            }
+
+            @include mq(mm) {
+                bottom: 8px;
+            }
+
+            @include mq(xm) {
+                display: none;
+            }
+
+        }
+
+        &:hover {
+
+            &:before {
+                transition: all ease .5s;
+                opacity: 0;
+            }
+
+            &:after {
+                transition: all ease .1s;
+                opacity: 1;
+            }
+        }
+    }
+
+    &-rotate {
+        display: inline-block;
+        transition: .5s;
+
+        @include mq(sm) {
+            font-size: 1.2rem;
+        }
+
+        &:hover {
+            transform: rotateX(720deg);
+        }
+    }
+}

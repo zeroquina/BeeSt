@@ -1,0 +1,270 @@
+.widget {
+    margin-left: 1em;
+    width: 32.90909%;
+
+    @include mq(md) {
+        width: 100%;
+        padding: 0 1em;
+        margin-left: 0;
+    }
+
+    &__title {
+        position: relative;
+        margin-bottom: 1.4em;
+        padding-bottom: .8em;
+        line-height: 1.6;
+        font-size: 1.25rem;
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 7px;
+            background: repeating-linear-gradient(-45deg, #43ef8a, #43ef8a 2px, #fff 2px, #fff 4px);
+        }
+    }
+
+    &__search {
+            margin-bottom: 50px;
+
+        &__form {
+            position: relative;
+        }
+
+        &__field {
+            width: 100%;
+            padding: 20px 24px;
+            background-color: none;
+            border: 1px solid #9b9b9b;
+            border-radius: 3px;
+            outline: none;
+
+            &::placeholder {
+                color: #9b9b9b;
+            }
+        }
+
+        &__submit {
+            position: absolute;
+            top: 27%;
+            right: 24px;
+            background: none;
+            font-size: 1.625rem;
+            color: #9b9b9b;
+        }
+    }
+
+    &__profile {
+        margin-bottom: 50px;
+
+        &__img {
+            margin: 0 auto 2em auto;
+            width: 100px;
+            height: 100px;
+
+            & > img {
+                width: 100%;
+                height: 100%;
+                border-radius: 100px;
+                box-shadow: 0px 1px 3px rgba(0,0,0,.4);
+            }
+        }
+
+        &__contents {
+            padding: 0 1em;
+            line-height: 1.6;
+            font-size: 1rem;
+
+
+            & > ul > li {
+                width: 48px;
+                height: 48px;
+                line-height: 48px;
+                margin-right: 2em;
+                border-radius: 48px;
+
+                &:nth-child(3) {
+                    margin-right: 0;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    opacity: 0.6;
+                    transition: all ease .5s;
+                }
+
+                & > a {
+                    color: $winter;
+                }
+            }
+        }
+
+        &__ttl {
+            text-align: center;
+            margin-bottom: .625em;
+        }
+
+        &__txt {
+            margin-bottom: 1.875em;
+
+            & > span {
+                font-size: 1rem;
+                color: #e81919;
+            }
+        }
+
+        &__invite {
+            margin-bottom: 1.875em;
+            padding: 10px;
+            background-color: rgba(67, 239, 138, 0.8);
+            text-align: center;
+            border-radius: 3px;
+        }
+
+        &__sns {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+
+        &__facebook {
+            background-color: #3B5998;
+        }
+
+        &__twitter {
+            background-color: #1DA1F2;
+        }
+
+        &__instagram {
+            position: relative;
+            background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+            overflow: hidden;
+
+            &::before {
+                position: absolute;
+                top: 23px;
+                left: -18px;
+                width: 60px;
+                height: 60px;
+                background: radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+                content: '';
+            }
+        }
+    }
+
+    &__new {
+
+        margin-bottom: 50px;
+
+        &__items {
+            margin-bottom: 1em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1em;
+            box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
+
+            &:hover {
+                box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 30px -5px, rgba(0, 0, 0, 0.1) 0px 0px 5px;
+                transform: translate(-2px, -2px);
+                transition: all 0.5s ease 0s;
+            }
+        }
+
+        &__img {
+            flex-shrink: 0;
+            width: 120px;
+            padding: .5em;
+
+            & > img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__txt {
+            color: $stag-beetle;
+            padding: .5em;
+        }
+    }
+
+    &__archive {
+
+        margin-bottom: 50px;
+
+        ul {
+
+            & > li {
+                margin-bottom: 8px;
+                border-bottom: 1px solid #808080;
+
+                & > a {
+                    position: relative;
+                    display: block;
+                    padding: 1em 1em 1em 0;
+                    color: #808080;
+        
+                    &:hover {
+                        opacity: .3;
+                        transition: all ease .5s;
+                    }
+        
+                    &::before {
+                        position: absolute;
+                        right: 0;
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 900;
+                        content: "\f101";
+                    }
+                }
+            }
+        }
+    }
+
+    &__category {
+        margin-bottom: 50px;
+
+        ul {
+
+            & > li {
+                margin-bottom: 8px;
+                border-bottom: 1px solid #808080;
+
+                & > a {
+                    position: relative;
+                    display: block;
+                    padding: 1em 1em 1em 0;
+                    color: #808080;
+
+                    &:hover {
+                        opacity: .3;
+                        transition: all ease .5s;
+                    }
+
+                    & > span {
+                        position: absolute;
+                        display: inline-block;
+                        right: 0;
+                        bottom: 25%;
+                        min-width: 24px;
+                        height: 24px;
+                        line-height: 24px;
+                        font-size: 12px;
+                        background-color: rgba(67, 239, 138, 0.8);
+                        font-family: $chalk;
+                        border-radius: 24px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
