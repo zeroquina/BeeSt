@@ -1,0 +1,283 @@
+.contact {
+    &-inner {
+        margin-top: $top60;
+        padding: 0 1em;
+    }
+
+    &__title {
+        margin-bottom: 3.75em;
+    }
+
+    &__breadcrumb {
+        margin-top: $top60;
+    }
+
+    &__txt-btn {
+        margin-top: $top60;
+    }
+
+    &__main-txt, &__sub-txt {
+        text-align: center;
+    }
+
+    &__main-txt {
+        line-height: 1.5;
+        font-size: 1.5rem;
+
+        @include mq(md) {
+            font-size: 1.125rem;
+        }
+    }
+
+    &__sub-txt {
+        margin-top: 1em;
+        margin-bottom: 2.875em;
+        line-height: 1.2;
+        font-size: 1.225rem;
+
+        @include mq(md) {
+            font-size: 1rem;
+        }
+    }
+
+    &__sns {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2.875em;
+
+        & > a {
+            display: block;
+            width: 60px;
+            height: 60px;
+            margin-right: $top60;
+            color: $winter;
+            text-align: center;
+            line-height: 60px;
+            border-radius: 60px;
+
+            &:first-child {
+                background: #1DA1F2;
+            }
+
+            &:last-child {
+                position: relative;
+                margin-right: 0;
+                background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+                overflow: hidden;
+    
+                &::before {
+                    position: absolute;
+                    top: 23px;
+                    left: -18px;
+                    width: 60px;
+                    height: 60px;
+                    background: radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+                    content: '';
+                }
+            }
+
+            &:hover {
+                opacity: .5;
+                transition: all ease .5s;
+            }
+
+            & > i {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+.cf {
+    margin: 1.25em 0;
+
+    &__items {
+        padding: 0 2em;
+
+        @include mq(sm) {
+            padding: 0;
+        }
+    }
+
+    &__list {
+        padding: 0 1em;
+    }
+
+    &__item {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 1.25em;
+    }
+
+    &__notes {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        line-height: 1.5;
+
+        &:nth-child(2) {
+            margin-bottom: 2.25em;
+        }
+    }
+
+    &__txt {
+        width: 25%;
+        line-height: 40px;
+
+        @include mq(lg) {
+            width: 100%;
+            margin-bottom: .5em;
+        }
+    }
+
+    &-input {
+        width: 65%;
+        margin-left: .8em;
+
+        @include mq(lg) {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        & > span > input[type="text"],
+        & > span > input[type="url"],
+        & > span > input[type="email"],
+        & > span > textarea {
+            width: 100%;
+            padding-left: 6px;
+            border: 1px solid #9b9b9b;
+            border-radius: 2px;
+            outline: none;
+            caret-color: #0090ff;
+
+            &::placeholder {
+                color: #9b9b9b;
+            }
+        }
+
+        & > span > input[type="text"],
+        & > span > input[type="url"],
+        & > span > input[type="email"] {
+            height: 40px;
+            font-size: 1rem;
+            font-family: $google-jp;
+        }
+
+        & > textarea{ 
+            height: 150px;
+            padding-top: 0.625em;
+            line-height: 1.5;
+            font-size: 1rem;
+            font-family: $google-jp;
+        }
+    }
+
+    &__privacy {
+        width: 73%;
+        height: 180px;
+        margin: 0 auto 1.25em auto;
+        padding: 0.625em;
+        border: 1px solid #9b9b9b;
+        border-radius: 2px;
+        outline: none;
+        overflow-y: scroll;
+        
+        @include mq(lg) {
+            width: 100%;
+        }
+
+        &__wrapper {
+            padding: 0 1em;
+        }
+
+        &__title {
+            margin-bottom: 1.25em;
+            padding-bottom: 0.5em;
+            font-size: 1.125rem;
+            font-weight: bold;
+            border-bottom: 2px solid #0090ff;
+
+            @include mq(md) {
+                font-size: 1rem;
+            }
+        }
+
+        &__subtitle, &__text {
+            padding: 0 0.625em;
+            line-height: 1.5;
+        }
+
+
+        &__subtitle {
+            width: 65%;
+            margin: 0.625em 0;
+            padding: 0.625em 0;
+            border-top: 1px solid #0090ff;
+            border-bottom: 1px solid #0090ff;
+
+            @include mq(md) {
+                font-size: .8rem;
+            }
+        }
+
+        &__text {
+
+            @include mq(md) {
+                font-size: .8rem;
+            }
+
+            & > a {
+                text-decoration: underline;
+                color: #0090ff;
+
+                &:hover {
+                    opacity: .5;
+                    transition: all ease .5s;
+                }
+            }
+        }
+    }
+
+    &__checkbox {
+        max-width: 305px;
+        margin: 3em auto 0 auto;
+    }
+
+    &-required {
+        margin-left: 5px;
+        padding-right: 5px;
+        padding-left: 4px;
+        background-color: #e81919;
+        color: $winter;
+        border-radius: 3px;
+    }
+
+    &-mark {
+        margin-right: 5px;
+        padding-right: 5px;
+        padding-left: 4px;
+        background-color: #e81919;
+        color: $winter;
+        border-radius: 3px;
+    }
+    
+    &__submit {
+        margin: 3em 0;
+        text-align: center;
+
+        & > input {
+            background-color: $winter;
+            padding: 1em 5em;
+            border: 2px solid #0090ff;
+            border-radius: 3px;
+            outline: none;
+            transition: all ease .3s;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #0090ff;
+                color: $winter;
+                transition: all ease .3s;
+            }
+        }
+    }
+}

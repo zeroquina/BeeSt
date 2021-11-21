@@ -1,0 +1,59 @@
+.fab {
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+
+.fa-instagram {
+    position: relative;
+    z-index: 2;
+}
+
+.fa-angle-right {
+    color: #808080;
+    margin: 0 15px;
+}
+
+.fa-hatena {
+    &:before {
+        content: "B!";
+        font-family: Verdana;
+        font-weight: bold;
+    }
+}
+
+.return-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(67, 239, 138, 0.8);
+    border-radius: 60px;
+
+    & > a {
+        display: block;
+        line-height: 60px;
+        font-size: 2.3rem;
+        color: $stag-beetle;
+        text-align: center;
+    }
+}
+
+.other__return-top {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(67, 239, 138, 0.8);
+    border-radius: 60px;
+
+    & > a {
+        display: block;
+        line-height: 60px;
+        font-size: 2.3rem;
+        color: $stag-beetle;
+        text-align: center;
+    }
+}
+

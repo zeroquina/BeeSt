@@ -1,0 +1,49 @@
+.mv {
+    position: relative;
+    background: url(../src/images/about_header.JPG) no-repeat 80% center/cover;
+    height: 100vh;
+    z-index: 1;
+
+    @include mq(md) {
+        background-position-x: 35%;
+    }
+
+    @include mq(sm) {
+        background-position-x: 50%;
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: $winter;
+        opacity: .2;
+        z-index: 2;
+        content: "";
+    }
+
+    &__title {
+        position: absolute;
+        top: 45%;
+        left: 10%;
+        line-height: 1.2;
+        font-weight: 900;
+        font-size: 2rem;
+        color: $winter;
+        z-index: 3;
+
+        @include mq(md) {
+            left: 5%;
+            font-size: 1.65rem;
+        }
+
+        @include mq(sm) {
+            font-size: 1.5rem;
+        }
+
+        @include mq(xm) {
+            left: 5%;
+        }
+    }
+}

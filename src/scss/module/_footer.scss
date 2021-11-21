@@ -1,0 +1,109 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 2;
+    background-color: #723901;
+
+    &__inner {
+        padding: 1em;
+    }
+
+    &__txt, &__sub-txt {
+        font-family: $chalk;
+        color: $winter;
+        text-align: center;
+    }
+
+    &__link {
+        width: 80px;
+        margin: 0 auto;
+    }
+
+    &__txt {
+        display: block;
+        font-size: 1.5rem;
+
+        &:hover {
+            opacity: .4;
+            transition: all ease .5s;
+        }
+    }
+
+    &__sub-txt {
+        font-size: 1.2rem;
+
+        @include mq(mm) {
+            font-size: .8rem;
+        }
+    }
+
+    &__sns {
+
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: rgba(114, 57, 1, 0.7);
+        color: $winter;
+
+        &__inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70px;
+
+            @include mq(xl) {
+                padding: 0 1.875em;
+            }
+        }
+
+        &__head {
+            margin-right: auto;
+
+            @include mq(md) {
+                display: none;
+            }
+        }
+
+        &__buttons {
+
+            @include mq(md) {
+                width: 70%;
+            }
+
+            & > ul {
+                display: flex;
+                align-items: center;
+
+                @include mq(md) {
+                    justify-content: space-between;
+                }
+            }
+
+            & li {
+                margin-right: 50px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                & > a {
+                    font-size: 26px;
+                }
+            }
+        }
+
+        &__twitter {
+            color: #1DA1F2;
+        }
+
+        &__facebook {
+            color: #3B5998;
+        }
+
+        &__hatena {
+            color: #00a4de;
+        }
+    }
+}
